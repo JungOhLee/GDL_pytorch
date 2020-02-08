@@ -1,0 +1,64 @@
+
+
+Sun Feb  9 01:28:21 2020
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 4.15.0-62-generic (#69-Ubuntu SMP Wed Sep 4 20:55:53 UTC 2019) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       1000215216 sectors
+/dev/sda: user_max   1000215216 sectors
+/dev/sda: native_max 1000215216 sectors
+/dev/sdb: LBA, HPA, LBA48, DCO support
+/dev/sdb: size       7814037168 sectors
+/dev/sdb: user_max   7814037168 sectors
+/dev/sdb: native_max 7814037168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 512 GB / 476 GiB - CHS 62260 255 63, sector size=512 - Samsung SSD 860 PRO 512GB, S/N:S419NX0M700771J, FW:RVM01B6Q
+Disk /dev/sdb - 4000 GB / 3726 GiB - CHS 486401 255 63, sector size=512 - HGST HUS726T4TALA6L4, S/N:V6JDMSHS, FW:VLGNW460
+
+Partition table type (auto): EFI GPT
+Disk /dev/sda - 512 GB / 476 GiB - Samsung SSD 860 PRO 512GB
+Partition table type: EFI GPT
+
+Interface Advanced
+hdr_size=92
+hdr_lba_self=1
+hdr_lba_alt=1000215215 (expected 1000215215)
+hdr_lba_start=34
+hdr_lba_end=1000215182
+hdr_lba_table=2
+hdr_entries=128
+hdr_entsz=128
+ 1 P EFI System                  2048    1050623    1048576 [EFI System Partition]
+ 2 P Unknown                  1050624    3004415    1953792
+ 3 P Unknown                  3004416 1000214527  997210112
+gpt_change_part_type
+Change partition type:
+ 1 P EFI System                  2048    1050623    1048576 [EFI System Partition]
+Change partition type:
+ 1 P Unknown                     2048    1050623    1048576 [EFI System Partition]
+New options :
+ Dump : No
+ Align partition: Yes
+ Expert mode : No
+
+Interface Advanced
+hdr_size=92
+hdr_lba_self=1
+hdr_lba_alt=1000215215 (expected 1000215215)
+hdr_lba_start=34
+hdr_lba_end=1000215182
+hdr_lba_table=2
+hdr_entries=128
+hdr_entsz=128
+ 1 P EFI System                  2048    1050623    1048576 [EFI System Partition]
+ 2 P Unknown                  1050624    3004415    1953792
+ 3 P Unknown                  3004416 1000214527  997210112
+
+TestDisk exited normally.
