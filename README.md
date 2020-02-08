@@ -1,6 +1,6 @@
 # GDL_pytorch
 
-Pytorch code for [Generative Deep Learning](https://www.google.com) book
+PyTorch code for [Generative Deep Learning](https://www.google.com) book
 
 Freely usable! 
 
