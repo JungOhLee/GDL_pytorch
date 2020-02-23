@@ -48,8 +48,19 @@ if __name__=="__main__":
         , generator_batch_norm_momentum = 0.9
         , generator_activation = 'relu').to(device)
     
+    # Initialization
     init_params(generator)
     init_params(discriminator)
+
+    # Data import
+    DATA_NAME='camel'
+    (x_train, y_train) = load_safari(DATA_NAME)
+    _x_train = np.transpose(x_train, (0,3,1,2))
+    _y_train=np.array(y_train)
+    x_train = torch.from_numpy(_x_train).to(device)
+    y_train= torch.from_numpy(_y_train).to(device)
+    
+    input_data = [[x_item, y_item] for x_item, y_item in zip(x_train, y_train)]
     
     camel_loader=DataLoader(input_data, batch_size=args.batch_size, shuffle=True)
     # Loss and optimizer
@@ -98,4 +109,10 @@ if __name__=="__main__":
             generator_optimizer.step()
 
         print("%d: Discriminator Loss=%.4f, Generator Loss=%.4f" % (epoch, 10000*discriminator_loss.item(), generator_loss.item()))
+    
+    test_sample=torch.normal(0, 1, [batch_size, 100])
+    test_sample=test_sample.to(device)
+    test_result=generator(test_sample).to('cpu')
+    np.save('test_result', test_result.detach().numpy())
+    
     
